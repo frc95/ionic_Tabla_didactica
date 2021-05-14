@@ -1,0 +1,102 @@
+<ion-content [fullscreen]="true">
+  <!-- NUMEROS -->
+  
+    
+  <ion-button (click)="uno()" style="height: 33%;" *ngIf='number' expand="full"><ion-img class="imgbutton" src="assets/home/1.png"></ion-img></ion-button>
+
+  <div style="height: 33%;" *ngIf='number' class="row">
+    <div class="column"><ion-button (click)="dos()" style="height: 99%;" *ngIf='number' expand="full"><ion-img class="imgbutton" src="assets/home/2.png"></ion-img></ion-button></div>
+    <div class="column"><ion-button (click)="tres()" style="height: 99%;" *ngIf='number' expand="full"><ion-img class="imgbutton" src="assets/home/3.png"></ion-img></ion-button></div>
+  </div>
+  <div style="height: 33%;" *ngIf='number' class="row">
+    <div class="column"><ion-button (click)="cuatro()" style="height: 99%;" *ngIf='number' expand="full"><ion-img class="imgbutton" src="assets/home/4.png"></ion-img></ion-button></div>
+    <div class="column"><ion-button (click)="cinco()" style="height: 99%;" *ngIf='number' expand="full"><ion-img class="imgbutton" src="assets/home/5.png"></ion-img></ion-button></div>
+  </div>
+    
+
+  <!-- ANIMALES -->
+  <ion-button (click)="perro()" style="height: 33%;" *ngIf='animales' expand="full"><ion-img class="imgbutton" src="assets/home/perro.png"></ion-img></ion-button>
+
+  <div style="height: 33%;" *ngIf='animales' class="row">
+    <div class="column"><ion-button (click)="gato()" style="height: 99%;" *ngIf='animales' expand="full"><ion-img class="imgbutton" src="assets/home/gato.png"></ion-img></ion-button></div>
+    <div class="column"><ion-button (click)="pajaro()" style="height: 99%;" *ngIf='animales' expand="full"><ion-img class="imgbutton" src="assets/home/pajaro.png"></ion-img></ion-button></div>
+  </div>
+  <div style="height: 33%;" *ngIf='animales' class="row">
+    <div class="column"><ion-button (click)="leon()" style="height: 99%;" *ngIf='animales' expand="full"><ion-img class="imgbutton" src="assets/home/leon.png"></ion-img></ion-button></div>
+    <div class="column"><ion-button (click)="mono()" style="height: 99%;" *ngIf='animales' expand="full"><ion-img class="imgbutton" src="assets/home/mono.png"></ion-img></ion-button></div>
+  </div>
+
+  <!-- COLORES -->
+  <ion-button (click)="rojo()" style="height: 33%;" class="buttonUno" *ngIf='colores' expand="full"></ion-button>
+
+  <div style="height: 33%;" *ngIf='colores' class="row">
+    <div class="column"><ion-button (click)="azul()" style="height: 99%;" class="buttonDos" *ngIf='colores' expand="full"></ion-button></div>
+    <div class="column"><ion-button (click)="verde()" style="height: 99%;" *ngIf='colores' expand="full"></ion-button></div>
+  </div>
+  <div style="height: 33%;" *ngIf='colores' class="row">
+    <div class="column"><ion-button (click)="amarillo()" style="height: 99%;" class="buttonCuatro" *ngIf='colores' expand="full"></ion-button></div>
+    <div class="column"><ion-button (click)="naranja()" style="height: 99%;" class="buttonCinco" *ngIf='colores' expand="full"></ion-button></div>
+  </div>
+
+
+
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <!-- BRASIL -->
+    <ion-fab-button (click)="Brasil()" *ngIf='!brasil'>
+      <ion-img src="assets/home/brasil.png"></ion-img>
+    </ion-fab-button>
+    <ion-fab-button (click)="Brasil()" color="danger" *ngIf='brasil'>
+      <ion-img src="assets/home/brasil.png"></ion-img>
+    </ion-fab-button>
+
+    <!-- ESPAÑA -->
+    <ion-fab-button (click)="Espana()" *ngIf='!espana'>
+      <ion-img src="assets/home/espana.png"></ion-img>
+    </ion-fab-button>
+    <ion-fab-button (click)="Espana()" color="danger" *ngIf='espana'>
+      <ion-img src="assets/home/espana.png"></ion-img>
+    </ion-fab-button>
+
+    <!-- EEUU -->
+    <ion-fab-button (click)="Eeuu()" *ngIf='!eeuu'>
+      <ion-img src="assets/home/eeuu.png"></ion-img>
+    </ion-fab-button>
+    <ion-fab-button (click)="Eeuu()" color="danger" *ngIf='eeuu'>
+      <ion-img src="assets/home/eeuu.png"></ion-img>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-fab vertical="top" horizontal="start" slot="fixed">
+    <!-- COLORES -->
+    <ion-fab-button (click)="Colores()" *ngIf="!colores">
+      <ion-img src="assets/home/color.png"></ion-img>
+    </ion-fab-button>
+    <ion-fab-button (click)="Colores()" color="danger" *ngIf="colores">
+      <ion-img src="assets/home/color.png"></ion-img>
+    </ion-fab-button>
+
+    <!-- NUMEROS -->
+    <ion-fab-button (click)="Numeros()" *ngIf='!number'>
+      <ion-img src="assets/home/numeros.png"></ion-img>
+    </ion-fab-button>
+    <ion-fab-button (click)="Numeros()" color="danger" *ngIf='number'>
+      <ion-img src="assets/home/numeros.png"></ion-img>
+    </ion-fab-button>
+
+    <!-- ANIMALES -->
+    <ion-fab-button (click)="Animales()" *ngIf='!animales'>
+      <ion-img src="assets/home/perro.png"></ion-img>
+    </ion-fab-button>
+    <ion-fab-button (click)="Animales()" color="danger" *ngIf='animales'>
+      <ion-img src="assets/home/perro.png"></ion-img>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button class="logout" color="danger" (click)="Logout()">
+      <ion-icon name="log-out-sharp"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+
+</ion-content>
