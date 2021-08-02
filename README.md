@@ -9,3 +9,10 @@ Los idiomas son:</p>
 <strong>Español.<br>
 Inglés.<br>
 Portugués.</strong>
+
+<p>Se tendrán botones flotantes que permitan seleccionar el tema deseado. (que posean imágenes alusivas).<br>
+Los temas son:</p>
+
+<strong>Colores.<br>
+Números.<br>
+Animales.</strong>
