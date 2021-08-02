@@ -16,3 +16,5 @@ Los temas son:</p>
 <strong>Colores.<br>
 Números.<br>
 Animales.</strong>
+
+<p>Cada botón debe tener un audio dependiendo del idioma.</p>
